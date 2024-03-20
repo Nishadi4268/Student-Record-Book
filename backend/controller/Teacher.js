@@ -69,4 +69,3 @@ const addStudent = async (req, res) => {
 };
 
 module.exports = { signup, login, forgotPassword, addStudent };
-

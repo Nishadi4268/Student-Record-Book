@@ -1,4 +1,5 @@
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { mongoURI } = require('./config');
@@ -7,6 +8,9 @@ const teacherRoutes = require('./routes/Teacher');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Middleware to handle file uploads
+app.use(fileUpload());
 
 // Connect to MongoDB
 mongoose.connect(mongoURI, {
@@ -39,3 +43,11 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Import the student controller
+const { getStudents, deleteStudent } = require('./controller/Student');
+
+// Routes
+app.get('/api/students', getStudents);
+app.delete('/api/students/:id', deleteStudent);
+
