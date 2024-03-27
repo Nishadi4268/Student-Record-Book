@@ -1,4 +1,3 @@
-// Import necessary modules
 const express = require('express');
 const router = express.Router();
 const Student = require('../models/Student');
@@ -24,7 +23,7 @@ router.post('/addstudent', async (req, res) => {
     image.mv(path.join(uploadDir, imageFileName));
 
     // Create and save the student to the database
-    const student = new Student({ name, dob, gpa, image: `/uploads/${imageFileName}` });
+    const student = new Student({ name, dob, gpa, image: `http://localhost:5000/uploads/${imageFileName}` });
     await student.save();
 
     res.status(201).json({ message: 'Student added successfully', student });
