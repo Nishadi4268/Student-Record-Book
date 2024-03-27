@@ -21,7 +21,7 @@ Node.js and npm installed
 MongoDB installed and running
 
 Installation
-Clone the repository: git clone https://github.com/your-username/student-record-book.git
+Clone the repository: git clone https://github.com/Nishadi4268/student-record-book.git
 Install dependencies:
 Backend: cd backend && npm install
 Frontend: cd frontend && npm install
