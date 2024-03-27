@@ -4,7 +4,7 @@ Certainly! Here's a sample README file for your GitHub repository based on your 
 Student Record Book
 A web application for managing student records, built with React.js, Node.js, and MongoDB.
 
-Features
+Features  		
 Teacher Authentication: Secure signup, login, and password reset functionality for teachers.
 Student Management: Add, delete, and edit student records with ease.
 
